@@ -1,11 +1,12 @@
 CC=gcc
-CFLAGS=
+CFLAGS=-Wall -std=gnu99 -g
 
-target: all
+target: bush
 
-all: bush.o
+# Implicit rules
+bush: bush.o
 
 bush.o: bush.c
 
 clean:
-	rm -f all *.o
+	rm -f bush *.o
